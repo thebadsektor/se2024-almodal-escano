@@ -1,45 +1,230 @@
-1. Make sure your device installed XAMPP 
+# SD-3101 [Online Voting System]
 
-2."TEXT EDITOR" NOTEPAD++ OR SUBLIME TEXT 3 / ETC.
+![Project Banner](images/bannerpic.png)
 
-3 "voting management system" name of the system
+## Table of Contents
 
-4. Download the zip file/ download winrar or Download Git Bash to clone and watch 
-"How to clone a repository" here's the Source repository "https://github.com/varmahes2/votesystem/tree/master"
+- [Introduction](#introduction)
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Usage Instructions](#usage-instructions)
+- [Project Structure](#project-structure)
+- [Contributors](#contributors)
+- [Project Timeline](#project-timeline)
+- [Chagelog](#changelog)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
-5. Extract the file and copy "votesystem" folder / 
-or if you are going to clone use Git Bash this link can guide you : https://chatgpt.com/share/ab87cbb2-0cdc-4cbb-bceb-9f968925d780
+---
 
-6.Paste inside root directory/ where you install xammp local disk C: drive D: drive E: paste: (for xampp/htdocs, 
+## Introduction
 
-7. Open PHPMyAdmin (http://localhost/phpmyadmin)
+A PHP-based online voting system is a software tool that allows users to vote via the internet. It offers a convenient and efficient way for users to participate in voting from any location, at any time. These systems are commonly used for various purposes, including political elections, school and university elections, corporate decision-making, and surveys.
 
-8. Create a database with name votesystem
+## Project Overview
 
-6. Import votesystem.sql file(given inside the zip package in SQL file folder)
+This online voting system is designed to provide a more efficient and convenient way of voting using PHP and MySQL. It was developed to address the challenges of traditional voting methods, such as long queues, location accessibility, and the time-consuming manual tallying of votes.
 
-NOTE : To run the admin and client sides seperately, open the admin side in a regular Chrome window 
-and the client side in an Incognito window or reverse . This allows you to manage both while keeping sessions isolated.
+- The primary target users of this system are educational institutions (for student council elections), corporate organizations (for internal decision-making), and small-scale community events. Additionally, administrators will benefit from streamlined voter management and real-time monitoring of election results.
 
-7.Run the script at your web browser (FOR ADMIN SIDE)  http://localhost/votesystem/admin/ OR http://localhost/votesystem/admin/index.php
+- The system's real-world applications include simplifying the voting process, allowing voters to participate from anywhere and at any time. By reducing the likelihood of errors, minimizing the risk of fraud, and enhancing transparency, this online voting system can significantly improve the overall integrity and accuracy of elections. Furthermore, it reduces the cost and time involved in organizing traditional voting events.
 
-Username : nurhodelta
-Password : password
+## Objectives
 
-8. Run the script at your web browser (FOR CLIENT SIDE) http://localhost/votesystem/ OR http://localhost/votesystem/index.php
+State the main objectives of the capstone project, such as:
 
-Voter' ID : 
-Password : 
+- Develop a solution to provide an efficient and convenient way of voting, allowing users to participate from anywhere and at any time.
 
-To create Voter's Account follow these steps : 
-(1.) Open the admin side account
-(2.) On the left side option list click  "Voters"
-(3.) Find and click the "+new" icon add Firstname, Lastname, Password and Photo (optional) and find and click "save button" 
-Example only!
-	  "Alpha" (Firstname)
-	  "Bravo" (Lastname)
-	  "12345" (Password)
-	  "GENERATED ID" (after creating, Voter's ID is auto generated)
-(4.) Now run the step 8 and sign in, now you can choose to vote
+- Implement features to improve the accuracy and integrity of the voting process by reducing errors, minimizing fraud, and increasing transparency.
 
-ERROR : printing the Votes Tally
+- Test and validate the system's ability to reduce the cost and time associated with traditional voting methods.
+
+## Features
+
+List the main features of the project:
+
+Admin-side:
+
+- Dashbord: provides an overview of the voting system. It displays the total number of positions, candidates, voters, and voters who have cast their votes, with clickable links to access detailed pages.
+
+- Update Admin Profile : Allows the admin to update their username, first name, last name, photo, and set a new password. To save changes, the admin must enter their current password for security.
+
+- Result Tally via Horizontal Barchart: Visual representation of each position of voting results.
+
+- Offer reports on each position, candidate, and a list of voters who participated in the election.
+
+- CRUD (Create, Read, Update and Delete) Operations for Voters, Candidates, and Positions: Easy management of voter, candidate, and position data.
+
+- Ballot Positioning: It allows you to adjust or rearrange the order of positions on the ballot.
+
+- Configure Election Title: allows you to edit and set the title of the current election, providing a clear identifier for the voting event.
+
+Voter's Side:
+
+- Voter's Dashboard: Where voters can view a slideshow of candidate information before logging in to vote, including the candidate's platform, photo, name, and position. Voters can also preview their ballot before and after submitting their vote.
+
+## Technologies Used
+
+Mention the tools, frameworks, and technologies used in the project:
+
+- Programming Languages: JavaScript, PHP
+- Frameworks/Libraries: jQuery, Bootstrap
+- Databases: MySQL
+- Software used: WAMP/ XAMPP/ LAMP/MAMP
+- Browser used: Google Chrome, Microsoft Edge, Mozilla Firefox, Brave
+- Other Tools: HTML, AJAX
+
+## Setup and Installation
+
+Step-by-step instructions for setting up the project locally.
+   create folder at your local disk name "votesystem"
+
+1. **Clone the repository using Git:**
+
+   ```bash
+   cd /path/to/your/local/disk
+   ```
+
+   Clone the Repository into the votesystem Folder: Use the git clone command with the --branch option to specify the branch and --single-branch to limit it to the specified branch:
+
+   ```bash
+      git clone --branch master --single-branch https://github.com/varmahes2/votesystem.git votesystem
+   ```
+
+   This command will clone the master branch of the repository into a folder named votesystem on your local disk.
+
+2. **Set up the environment:**
+
+- Download and Install XAMPP
+- Open the XAMPP and click Start Apache and MySQL services
+- Click MySQL admin it will direct you to <http://localhost/phpmyadmin/>
+
+3. **Folder Directory:**
+
+- At your Local Disk.
+- Move "votesystem" folder inside the xampp.
+- after xampp move it inside the htdocs folder.
+
+4. **Database Setup:**
+
+- at <http://localhost/phpmyadmin/> click new
+- Database name = votesystem and click create
+- Click import
+- Choose file = At votesystem folder find db folder and select votesystem.sql file and open
+
+5. **Run the projcet:**
+
+- Access the admin side by pasting or typing this at your browser
+  - <http://localhost/votesystem/admin/index.php>
+- Access the voter side by pasting or typing this at your browser
+  - <http://localhost/votesystem/index.php>
+
+## Usage Instructions
+
+Provide detailed instructions on how to use the project after setup:
+
+1. **Admin Login:**
+
+- Username:
+  - nurhodelta
+- Password:
+  - password
+- Admin side screen short:
+
+![UI Placeholder](images/adminss.png)
+
+- Another Screenshot
+
+![UI Placeholder](images/adminss2.png)
+
+2. **Voter Side:**
+
+- To create voter's account go to admin
+- Under Manage
+  - Voters page
+    - Click new Enter First and Lastname, Password, Photo (optional)    and save.
+      - Copy the auto generated 15 strings (ID)  
+        - Open the Voter's side enter ID and Password
+
+![UI Placeholder](images/voterslogin.png)
+
+## Project Structure
+
+Explain the structure of the project directory. Example:
+
+```bash
+.
+└── Local Disk
+    └── xampp
+        └── htdocs
+            └── votesystem
+                ├── admin
+                ├── bower-components
+                ├── db
+                ├── dist
+                ├── images
+                ├── includes
+                ├── plugins
+                ├── tcpdf
+                ├── home
+                ├── index
+                ├── login
+                ├── logout
+                ├── preview
+                ├── README BACKUP ORIG.txt
+                ├── README.md
+                └── submit_ballot
+```
+
+## Contributors
+
+List all the team members involved in the project. Include their roles and responsibilities:
+
+- **Marx Miguel Escaño**: Lead Developer,
+ Backend Developer
+- **Aldie Mae Almodal**: Frontend Developer, UI/UX Designer
+- **Gerald Villaran**: Project Manager, Tester
+
+## Project Timeline
+
+Outline the project timeline, including milestones or deliverables. Example:
+
+- **Week 1-2**: Research and project planning.
+- **Week 3-5**: Design and setup.
+- **Week 6-10**: Implementation.
+- **Week 11-12**: Testing and debugging.
+- **Week 13-14**: Final presentation and documentation.
+
+## Changelog
+
+### [Version 1.0.0] - 2024-09-07
+
+- Initial release of the project.
+- Added basic functionality for [Feature 1], [Feature 2], and [Feature 3].
+
+### [Version 1.1.0] - 2024-09-14
+
+- Improved user interface for [Feature 1].
+- Fixed bugs related to [Feature 2].
+- Updated project documentation with setup instructions.
+
+### [Version 1.2.0] - 2024-09-21
+
+- Added new functionality for [Feature 4].
+- Refactored codebase for better performance.
+- Added unit tests for [Feature 3] and [Feature 4].
+
+## Acknowledgments
+
+Acknowledge any resources, mentors, or external tools that helped in completing the project.
+
+The Collaboration and Version Control using Github tutorial and <https://tree.nathanfriend.io/>..
+
+This project was built from [Original Project Name](https://github.com/varmahes2/votesystem/tree/master), created by varmahes2. You can view the original repository [here](https://github.com/varmahes2/votesystem/tree/master).
+
+## License
+
+This project is licensed under the GNU General Public License (GPL). Please refer to the LICENSE file for more details.
