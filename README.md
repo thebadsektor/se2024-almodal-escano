@@ -158,17 +158,17 @@ Explain the structure of the project directory. Example:
 ```bash
 .
 └── Local Disk
-    └── xampp
-        └── htdocs
-            └── votesystem
-                ├── admin
-                ├── bower-components
-                ├── db
-                ├── dist
-                ├── images
-                ├── includes
-                ├── plugins
-                ├── tcpdf
+    └── xampp/
+        └── htdocs/
+            └── votesystem/
+                ├── admin/
+                ├── bower-components/
+                ├── db/
+                ├── dist/
+                ├── images/
+                ├── includes/
+                ├── plugins/
+                ├── tcpdf/
                 ├── home
                 ├── index
                 ├── login
