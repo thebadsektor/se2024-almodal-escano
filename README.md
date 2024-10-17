@@ -157,26 +157,23 @@ Explain the structure of the project directory. Example:
 
 ```bash
 .
-└── Local Disk
-    └── xampp/
-        └── htdocs/
-            └── votesystem/
-                ├── admin/
-                ├── bower-components/
-                ├── db/
-                ├── dist/
-                ├── images/
-                ├── includes/
-                ├── plugins/
-                ├── tcpdf/
-                ├── home
-                ├── index
-                ├── login
-                ├── logout
-                ├── preview
-                ├── README BACKUP ORIG.txt
-                ├── README.md
-                └── submit_ballot
+└── votesystem/
+   ├── admin/
+   ├── bower-components/
+   ├── db/
+   ├── dist/
+   ├── images/
+   ├── includes/
+   ├── plugins/
+   ├── tcpdf/
+   ├── home.php
+   ├── index.php
+   ├── login.php
+   ├── logout.php
+   ├── preview.php
+   ├── README BACKUP ORIG.txt
+   ├── README.md
+   └── submit_ballot.php
 ```
 
 ## Contributors
