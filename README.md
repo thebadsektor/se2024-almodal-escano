@@ -194,6 +194,10 @@ Outline the project timeline, including milestones or deliverables. Example:
 
 - **Week 1-2**: Research and project planning.
 - **Week 3-5**: Design and setup.
+    - Added Features
+    • Forgot Password for Admin
+    • Pre - Vote Information Slide
+    • Voting Progress Bar
 - **Week 6-10**: Implementation.
 - **Week 11-12**: Testing and debugging.
 - **Week 13-14**: Final presentation and documentation.
