@@ -231,5 +231,5 @@ The Collaboration and Version Control using Github tutorial and <https://tree.na
 This project was built from [Original Project Name](https://github.com/varmahes2/votesystem/tree/master), created by varmahes2. You can view the original repository [here](https://github.com/varmahes2/votesystem/tree/master).
 
 ## License
+This project is licensed under the [GNU General Public License v3.0](LICENSE).
 
-This project is licensed under the GNU General Public License (GPL). Please refer to the LICENSE file for more details.
