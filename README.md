@@ -157,23 +157,22 @@ Explain the structure of the project directory. Example:
 
 ```bash
 .
-└── votesystem/
-   ├── admin/
-   ├── bower-components/
-   ├── db/
-   ├── dist/
-   ├── images/
-   ├── includes/
-   ├── plugins/
-   ├── tcpdf/
-   ├── home.php
-   ├── index.php
-   ├── login.php
-   ├── logout.php
-   ├── preview.php
-   ├── README BACKUP ORIG.txt
-   ├── README.md
-   └── submit_ballot.php
+├── admin/
+├── bower-components/
+├── db/
+├── dist/
+├── images/
+├── includes/
+├── plugins/
+├── tcpdf/
+├── home.php
+├── index.php
+├── login.php
+├── logout.php
+├── preview.php
+├── README BACKUP ORIG.txt
+├── README.md
+└── submit_ballot.php
 ```
 
 ## Contributors
@@ -191,11 +190,11 @@ Outline the project timeline, including milestones or deliverables. Example:
 
 - **Week 1-2**: Research and project planning.
 - **Week 3-5**: Design and setup.
-    - [Youtube Link for the Collaborative Brainstorming for Feafture Development]
+    - https://www.youtube.com/watch?v=FNmUtghXdp0
     - Added Features
-    • Forgot Password for Admin
-    • Pre - Vote Information Slide
-    • Voting Progress Bar
+       - Forgot Password for Admin
+       - Pre-Vote Information Slide
+       - Voting Progress Bar
 
    - Feature to Implement: Dockerize Project
    - Completion Date: 27/10/2024
