@@ -165,6 +165,7 @@ Explain the structure of the project directory. Example:
 ├── includes/
 ├── plugins/
 ├── tcpdf/
+├── Dockerfile
 ├── home.php
 ├── index.php
 ├── login.php
