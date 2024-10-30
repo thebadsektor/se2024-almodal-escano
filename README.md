@@ -151,6 +151,40 @@ Provide detailed instructions on how to use the project after setup:
 
 ![UI Placeholder](images/voterslogin.png)
 
+3. **Docker instructions:**
+
+Prerequisites:
+- Docker Desktop Installed
+- VS Code with Docker Extension Installed
+
+instructions:
+- Create a Dockerfile
+In your project root, create a Dockerfile with the following content:
+
+FROM php:8.0-apache
+COPY . /var/www/html/
+EXPOSE 80
+
+- Create a .dockerignore File
+Add a .dockerignore file to exclude unnecessary files:
+
+node_modules
+.git
+.vscode
+
+- Build the Docker Image
+In VS Code Terminal, run:
+
+docker build -t my-app .
+
+- Run the Docker Container
+Execute this command to start your app:
+
+docker run -d -p 8080:80 my-app
+
+- Access the App
+Open http://localhost:8080 in your browser to view your app.
+
 ## Project Structure
 
 Explain the structure of the project directory. Example:
