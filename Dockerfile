@@ -1,17 +1,20 @@
-# Use an official PHP image with Apache
 FROM php:8.1-apache
 
-# Set the working directory in the container
-WORKDIR /var/www/html
+# Install the mysqli extension
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
-# Copy all project files into the container
-COPY . /var/www/html
+# Enable the Apache rewrite module
+RUN a2enmod rewrite
 
-# Install additional PHP extensions (like mysqli if you use MySQL)
-RUN docker-php-ext-install mysqli
+# Copy the custom Apache configuration file
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
-# Expose port 80 (HTTP)
+# Copy the entire project directory into the container
+COPY . /var/www/html/
+
+# Change ownership and permissions
+RUN chown -R www-data:www-data /var/www/html/ && \
+    chmod -R 755 /var/www/html/
+
+# Expose port 80 for Apache
 EXPOSE 80
-
-# Start Apache in the foreground when the container starts
-CMD ["apache2-foreground"]

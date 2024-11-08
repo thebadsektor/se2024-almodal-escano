@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./  # Ensure this points to the correct directory
+      dockerfile: Dockerfile
+    container_name: php-app
+    ports:
+      - "8080:80"  # Correct port mapping (host:container)
+    volumes:
+      - .:/var/www/html  # Mount the entire project directory into the container
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_here  # Set MySQL root password
+      MYSQL_DATABASE: votesystem  # Your database name
+    ports:
+      - "3306:3306"  # Correct port mapping for MySQL (host:container)
+    volumes:
+      - db_data:/var/lib/mysql  # Named volume for MySQL data
+      - ./migration.sql:/docker-entrypoint-initdb.d/migration.sql  # Mount migration.sql for DB initialization
+
+volumes:
+  db_data: {}
+
+networks:
+  default:
+    name: se2024-net  # Optional: define a custom network name
