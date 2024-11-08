@@ -75,7 +75,7 @@ Mention the tools, frameworks, and technologies used in the project:
 - Databases: MySQL
 - Software used: WAMP/ XAMPP/ LAMP/MAMP
 - Browser used: Google Chrome, Microsoft Edge, Mozilla Firefox, Brave
-- Other Tools: HTML, AJAX
+- Other Tools: HTML, AJAX, Docker
 
 ## Setup and Installation
 
@@ -152,7 +152,7 @@ Provide detailed instructions on how to use the project after setup:
 ![UI Placeholder](images/voterslogin.png)
 
 3. **Docker instructions:**
-
+   Docker is used to containerize the project environment, making setup and deployment easier.
 Prerequisites:
 - Docker Desktop Installed
 - VS Code with Docker Extension Installed
@@ -192,21 +192,25 @@ Explain the structure of the project directory. Example:
 ```bash
 .
 ├── admin/
-├── bower-components/
+├── bower_components/
 ├── db/
 ├── dist/
 ├── images/
 ├── includes/
 ├── plugins/
 ├── tcpdf/
+├── 000-default.conf
 ├── Dockerfile
+├── LICENSE
+├── README BACKUP ORIG.txt
+├── README.md
+├── docker-compose.yml
 ├── home.php
 ├── index.php
 ├── login.php
 ├── logout.php
+├── migration.sql
 ├── preview.php
-├── README BACKUP ORIG.txt
-├── README.md
 └── submit_ballot.php
 ```
 
